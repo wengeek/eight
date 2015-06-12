@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>八卦图</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="eight">
+      <div class="eight__top">
+        <div class="eight--circle">
+          <div class="eight--circle--top">
+            <div class="eight--circle--small eight--circle--left">
+              <div class="eight--circle--inner"></div>
+            </div>
+            <div class="eight--circle--small eight--circle--right">
+              <div class="eight--circle--inner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eight__bottom">
+        <div class="eight--circle">
+          <div class="eight--circle--top">
+            <div class="eight--circle--small eight--circle--left">
+              <div class="eight--circle--inner"></div>
+            </div>
+            <div class="eight--circle--small eight--circle--right">
+              <div class="eight--circle--inner"></div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <script>
+      var $circles = document.querySelectorAll('.eight > div');
+      setTimeout(function(){
+          $circles[0].className += ' active';
+          $circles[1].className += ' active';
+          setTimeout(function(){
+            document.getElementsByClassName('eight')[0].style.display = 'none';
+          }, 1000);
+      }, 4000);
+    </script>
+  </body>
+</html>
